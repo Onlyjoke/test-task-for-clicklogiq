@@ -15,8 +15,6 @@ export const photosSlice = createSlice({
     sortByKey: (state, action) => {
       const key = action.payload;
 
-      state.sortKey = key;
-
       state.data.sort((a, b) => {
         if (state.sortKey === key) {
           return -1;
@@ -32,6 +30,8 @@ export const photosSlice = createSlice({
 
         return 0;
       });
+
+      state.sortKey = key;
     }
   },
 });

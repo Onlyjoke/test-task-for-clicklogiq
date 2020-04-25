@@ -13,8 +13,6 @@
 
 .img {
     position: relative;
-    height: 300px;
-    width: 300px;
     margin-bottom: 60px;
     flex-basis: 20%;
     -ms-flex: auto;

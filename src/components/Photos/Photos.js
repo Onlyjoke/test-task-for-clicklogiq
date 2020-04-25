@@ -60,15 +60,18 @@ const Photos = () => {
       </div>
       <div className={styles.imgWrap}>
         {
-          images.map((item) => {
-            return(
-              <div key={item.url} className={styles.img}>
-                <img alt={item.url} src={item.url} />
-                <div>{item.fileName}</div>
-                <div>{item.fileSize} MB</div>
-              </div>
-            )
-          })
+          images.length !== 0 ?
+            images.map((item) => {
+              return(
+                <div key={item.url} className={styles.img}>
+                  <img alt={item.url} src={item.url} />
+                  <div>{item.fileName}</div>
+                  <div>{item.fileSize} MB</div>
+                </div>
+              )
+            })
+            :
+            <div>Loading...</div>
         }
       </div>
     </div>
