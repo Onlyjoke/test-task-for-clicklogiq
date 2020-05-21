@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Route, HashRouter as Router, Switch } from 'react-router-dom';
+import {Helmet} from 'react-helmet';
 
 import Sidebar from './components/Sidebar/Sidebar';
 import Container from './components/Container/Container';
@@ -8,6 +9,11 @@ import Empty from './components/Empty/Empty';
 
 const Routes = () => (
   <Router>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>CUSTOM TITLE</title>
+      <meta content="CUSTOM DESCRIPTION" name="description" />
+    </Helmet>
     <Container>
       <Sidebar />
       <Switch>
